@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FactFlare</title>
+    <link rel="icon" href="favicon.ico" type="c:\Users\Family\Downloads\OIG (6).jpg">
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+            position: relative;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: royalblue;
+            color: white;
+        }
+
+        header img {
+            width: 100px; /* Adjust the size of the logo */
+            height: auto;
+        }
+
+        header h1 {
+            flex: 1;
+            text-align: center;
+            margin: 0;
+        }
+
+        section {
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: royalblue;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        form label {
+            margin-bottom: 8px;
+        }
+
+        form input,
+        form textarea {
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: royalblue;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown.active .modal {
+            display: block;
+        }
+
+        .dropdown-content {
+            max-width: 200px;
+            color: white; /* Text color for the menu */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="c:\Users\Family\Downloads\OIG (6).jpg" alt="FactFlare Logo"> <!-- Replace with the path to your logo -->
+        <h1>FactFlare</h1>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Welcome to FactFlare! Here, we share random facts, and this is the place where I'll be uploading them weekly. Stay tuned for interesting facts!</p>
+
+        <p>1: The honeybee is the only insect that produces food eaten by humans.</p>
+        <p>2: Bananas are berries, but strawberries aren't.</p>
+        <p>3: The Eiffel Tower can be 15 cm taller during the summer due to thermal expansion.</p>
+        <p>4: Octopuses have three hearts and blue blood.</p>
+        <p>5: The shortest war in history was between Britain and Zanzibar on August 27, 1896, lasting only 38 minutes.</p>
+        <p>6: Cows have best friends and can become stressed when they are separated.</p>
+        <p>7: The longest word in the English language without a vowel is "rhythms."</p>
+        <p>8: A group of flamingos is called a "flamboyance."</p>
+        <p>9: The Great Wall of China is not visible from the Moon without aid.</p>
+        <p>10: The smell of freshly-cut grass is actually a plant distress call.</p>
+    </section>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>Email: newaccbrenden@gmail.com</p>
+    </section>
+
+    <div class="dropdown" onclick="toggleDropdown()">
+        <h2>...</h2>
+        <div class="modal" id="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <section>
+                <h2>Contact Me</h2>
+                <form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTJFqFtSmCpfSRGCPMcjbgBkJXpFsPxJhwGqXDKzHvChmNtKWXrpNxhDXLLCNWNwpgBTvV" method="get" target="_blank">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Email</button>
+                </form>
+            </section>
+            <section>
+                <h2>Report an Issue</h2>
+                <form action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTJFqFtSmCpfSRGCPMcjbgBkJXpFsPxJhwGqXDKzHvChmNtKWXrpNxhDXLLCNWNwpgBTvV" method="get" target="_blank">
+                    <label for="issue">Describe the Issue:</label>
+                    <textarea id="issue" name="issue" rows="4" required></textarea>
+
+                    <button type="submit">Report Issue</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Brenden Christopher | Designed by You</p>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            document.querySelector('.dropdown').classList.toggle('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
